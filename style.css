@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+html,body{
+    background-color:#212121;
+    color: white;
+}
+.container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+.game-board{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(120px,1fr));
+}
+
+.cell{
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 60px;
+    font-weight: 600;
+    height: 120px;
+}
+
+.cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
+    border-top: none;
+}
+.cell:first-child,.cell:nth-child(4),.cell:nth-child(7){
+    border-left: none;
+}
+.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9){
+    border-bottom: none;
+}
+.cell:nth-child(3),.cell:nth-child(6),.cell:nth-child(9){
+    border-right: none;
+}
+
+.game-players{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.player{
+
+    margin-top: 30px;
+    margin-inline: 18px;
+    font: 24px;
+    font-weight: 600;
+}
+#P1{
+    background-color: #ff0000;
+    margin-right: 30px;
+    border: 2px solid white;
+    padding: 7px;
+    border-radius: 8px;
+}
+#P2{
+    margin-right: 30px;
+    border: 2px solid white;
+    padding: 7px;
+    border-radius: 8px;
+}
+.restartBtn{
+    margin-top: 20px;
+    border: none;
+    padding :5px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.restartBtn:hover{
+    background-color: antiquewhite;
+}
+.alertbar{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: antiquewhite;
+    position: absolute;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 20px;
+}
